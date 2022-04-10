@@ -1,0 +1,42 @@
+.nav-item-mobile{
+    display: flex;
+    align-items: center;
+    margin: 1rem 1rem;
+    height: 4.3rem;
+}
+.hamburger-icon{
+    font-size: 2rem;
+    width: fit-content;
+}
+.nav-item-mobile:hover{
+    border: 2px solid var(--primary-color);
+    border-radius: 2rem;
+}
+.active{
+    background-color: var(--primary-color);
+    border-radius: 2rem;
+}
+.nav-item-mobile i{
+    flex: 0.2;
+    margin: 0 0.5rem 0 2.5rem;
+}
+.nav-item-text{
+    flex: 1;
+}
+.navbar{
+    box-shadow: 0px 1px 3px 2px var(--tertiary-color);
+}
+.navbar-icons-container img{
+    width: 2rem;
+    cursor: pointer;
+}
+.logo-text{
+    color: var(--primary-text-color);
+    margin-left: 0px;
+}
+.input-box .nav-searchbar{
+    color: var(--primary-text-color);
+ }
+.input-box .nav-searchbar:focus{
+    border: 2px solid var(--primary-color);
+ }
