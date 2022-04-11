@@ -3,6 +3,7 @@ import "./herosection.css";
 import Avatar1 from "../../../assets/images/male-avatar.svg";
 import HeroUserInfo from "./HeroUserInfo/HeroUserInfo";
 import Avatar from "./Avatar/Avatar";
+import AcheivementCategorySection from "../AcheivementCategorySection/AcheivementCategorySection";
 
 const HeroSection = () => {
   return (
@@ -14,9 +15,9 @@ const HeroSection = () => {
           Avatar={Avatar1}
           avatarClassName="img-round img-responsive avatar"
         />
-
         <HeroUserInfo />
       </div>
+      <AcheivementCategorySection />
     </div>
   );
 };

@@ -1,0 +1,49 @@
+.acheivements-featured-category-container .wrapper{
+    box-shadow: 0px 3px 8px var(--tertiary-color);
+    margin: 3rem 2rem;
+    border-radius: 2rem;
+}
+.grid-50-50{
+    gap: 0rem;
+}
+.acheivements-featured-category-heading{
+    text-align: center;
+    margin: 2rem 0rem;
+}
+.acheivements-badges-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.acheivement-badge-container .acheivement-badge{
+    width: 4.4rem;
+    height: 5.2rem;
+}
+.categories-container{
+    margin: 3rem 2rem;
+}
+.categories-cards-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card-only-image{
+    height: 6.9rem;
+    width: 10.5rem;
+    margin: 1rem;
+}
+.card{
+    background-color: transparent;
+    cursor: pointer;
+}
+.card-hover:hover{
+    box-shadow: var(--tertiary-color) 0px 1px 3px 0px, var(--tertiary-color) 0px 0px 0px 1px;
+}
+.text-overlay{
+    justify-content: start;
+    align-items: flex-end;
+    background-color: rgba(17, 17, 17, 0.5);
+}
+.text-overlay p{
+    margin: 0rem 0.5rem 1rem 0.5rem;
+}
