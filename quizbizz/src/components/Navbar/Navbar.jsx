@@ -1,23 +1,18 @@
 import React from "react";
 import "./navbar.css";
-import Avatar from "../../assets/images/male-avatar.svg";
-import { AiOutlineMenu } from "../../assets/icons/icons";
-import QuizBizz from "../../assets/images/quiz-bizz.svg";
-import PrimaryButton from "../../components/Buttons/PrimaryButton";
+import { Avatar, AiOutlineMenu, QuizBizz, PrimaryButton } from "./index";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div>
-        {/* <i className="fa fa-bars hamburger-icon" aria-hidden="true"></i>
-         */}
         <AiOutlineMenu className="hamburger-icon" />
       </div>
-      <div className="logo-container margin-horizontal-lg">
+      <div className="logo-container">
         <div className="logo">
           <img src={QuizBizz} alt="quizbizz" className="logo-image" />
           <span className="logo-text">Quiz</span>
-          <span className="primary-color">Bizz</span>
+          <span className="logo-sub-text primary-color">Bizz</span>
         </div>
       </div>
       <div className="nav-items-container-end">

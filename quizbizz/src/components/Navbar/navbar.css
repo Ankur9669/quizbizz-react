@@ -8,20 +8,9 @@
     font-size: 2rem;
     width: fit-content;
 }
-.nav-item-mobile:hover{
-    border: 2px solid var(--primary-color);
-    border-radius: 2rem;
-}
 .active{
     background-color: var(--primary-color);
     border-radius: 2rem;
-}
-.nav-item-mobile i{
-    flex: 0.2;
-    margin: 0 0.5rem 0 2.5rem;
-}
-.nav-item-text{
-    flex: 1;
 }
 .navbar{
     box-shadow: 0px 1px 3px 2px var(--tertiary-color);
@@ -34,9 +23,12 @@
     color: var(--primary-text-color);
     margin-left: 0px;
 }
+.logo-sub-text{
+    font-size: 1.5rem;
+}
 .input-box .nav-searchbar{
     color: var(--primary-text-color);
- }
+}
 .input-box .nav-searchbar:focus{
     border: 2px solid var(--primary-color);
- }
+}

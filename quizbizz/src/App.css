@@ -28,3 +28,18 @@ span{
 .secondary-color{
   color: var(--secondary-color);
 }
+.page-container{
+  display: grid;
+  grid-template-columns: 18.75rem auto;
+}
+@media only screen and (max-width: 870px){
+  .page-container{
+      display: grid;
+      grid-template-columns: 1fr;
+  }
+  /* .quiz-heading-container .image-container{
+      display: inline-block;
+      max-width: 6.25rem;
+      max-height: 5rem;
+  } */
+}
