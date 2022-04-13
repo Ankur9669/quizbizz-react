@@ -6,88 +6,54 @@ import {
 } from "../../../assets/icons/icons";
 import PrimaryButton from "../../../components/buttons/PrimaryButton";
 import SecondaryButton from "../../../components/buttons/SecondaryButton";
-import { Link, useNavigate } from "react-router-dom";
-// import Axios from "axios";
+import { Link } from "react-router-dom";
+import "../authentication.css";
+import Axios from "axios";
 // import { useUser } from "../../../Context/user-context";
 // import { useToast } from "../../../Context/toast-context";
-// import { PrimaryButton, SecondaryButton } from "../../Cart/HorizontalCard";
 
-function Loginform() {
+function SignupForm() {
   const [formDetails, setFormDetails] = useState({
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
   });
   const [isPasswordVisible, setPasswordVisible] = useState(false);
   // const { user, dispatchUser } = useUser();
-  // const { cart, dispatch: dispatchCart } = useCart();
-  // const navigate = useNavigate();
   // const { showToast } = useToast();
 
   const onSubmitForm = (e) => {
     //TODO VALIDATIONS
     e.preventDefault();
-    loginUser();
+    signUpUser();
   };
-  const loginUser = async () => {
-    if (formDetails.email === "" || formDetails.password === "") {
+
+  const signUpUser = async () => {
+    if (
+      formDetails.email === "" ||
+      formDetails.firstName === "" ||
+      formDetails.lastName === "" ||
+      formDetails.password === ""
+    ) {
       // showToast("Please Enter the details first", "ERROR");
       return;
     }
     try {
-      const response = await Axios.post("/api/auth/login", {
+      const response = await Axios.post("/api/auth/signup", {
+        firstName: formDetails.firstName,
+        lastName: formDetails.lastName,
         email: formDetails.email,
         password: formDetails.password,
       });
 
-      // console.log(response);
       const token = response.data.encodedToken;
       localStorage.setItem("token", token);
 
       // dispatchUser({
       //   type: "LOGIN",
-      //   payload: { value: response.data.foundUser },
+      //   payload: { value: response.data.createdUser },
       // });
-
-      // dispatchCart({
-      //   type: "SET_CART",
-      //   payload: {
-      //     value: response.data.foundUser.cart,
-      //   },
-      // });
-
-      navigate("/");
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const loginAsGuest = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await Axios.post("/api/auth/login", {
-        email: "adarshbalika@gmail.com",
-        password: "adarshBalika123",
-      });
-
-      console.log(response);
-      const token = response.data.encodedToken;
-      localStorage.setItem("token", token);
-
-      // dispatchUser({
-      //   type: "LOGIN",
-      //   payload: { value: response.data.foundUser },
-      // });
-
-      // dispatchCart({
-      //   type: "SET_CART",
-      //   payload: {
-      //     value: response.data.foundUser.cart,
-      //   },
-      // });
-
-      //TODO set wishlist here
-
-      navigate("/");
     } catch (error) {
       console.error(error);
     }
@@ -101,8 +67,32 @@ function Loginform() {
           <span className="primary-color font-large">Bizz</span>
         </h2>
         <p className="font-medium-large weight-semi-bold authentication-form-sub-heading">
-          LOGIN INTO YOUR ACCOUNT
+          REGISTER WITH US
         </p>
+        <div className="form-input-box">
+          <input
+            type="text"
+            placeholder="First Name"
+            value={formDetails.firstName}
+            onChange={(e) =>
+              setFormDetails({ ...formDetails, firstName: e.target.value })
+            }
+            required
+          />
+        </div>
+
+        <div className="form-input-box">
+          <input
+            type="text"
+            placeholder="Last Name"
+            value={formDetails.lastName}
+            onChange={(e) =>
+              setFormDetails({ ...formDetails, lastName: e.target.value })
+            }
+            required
+          />
+        </div>
+
         <div className="form-input-box">
           <input
             type="email"
@@ -137,36 +127,16 @@ function Loginform() {
             />
           )}
         </div>
-        <div className="checkbox-container">
-          <span>
-            <input type="checkbox" value="Remember Box" id="remember-box" />
-            <label
-              htmlFor="remember-box"
-              className="font-medium remember-me-checkbox"
-            >
-              Remember Me
-            </label>
-          </span>
-          <Link to="/" className="forgot-password-btn font-medium">
-            Forgot Password
-          </Link>
-        </div>
 
         <PrimaryButton
-          buttonText="Login As Guest"
-          className="form-cta-button"
-          onClick={(e) => loginAsGuest(e)}
-        />
-
-        <PrimaryButton
-          buttonText="Login"
+          buttonText="Create New Account"
           className="form-cta-button"
           onClick={(e) => onSubmitForm(e)}
         />
 
-        <Link to="/signup">
+        <Link to="/login">
           <SecondaryButton
-            buttonText="SignUp With Us"
+            buttonText="Already have an account!!!"
             className="form-cta-button"
           />
         </Link>
@@ -175,4 +145,4 @@ function Loginform() {
   );
 }
 
-export default Loginform;
+export default SignupForm;
