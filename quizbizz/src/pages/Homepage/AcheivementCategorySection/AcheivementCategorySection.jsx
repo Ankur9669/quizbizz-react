@@ -1,7 +1,7 @@
 import React from "react";
 import "./acheivement-category-section.css";
-import Acheivements from "./Acheivements/Acheivements";
-import Categories from "./Categories/Categories";
+import Acheivements from "./acheivements/Acheivements";
+import Categories from "./categories/Categories";
 
 const AcheivementCategorySection = () => {
   return (

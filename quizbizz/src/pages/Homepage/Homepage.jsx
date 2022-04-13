@@ -1,8 +1,7 @@
 import React from "react";
-import Navbar from "../../components/Navbar/Navbar";
-import Sidebar from "../../components/Sidebar/Sidebar";
-import AcheivementCategorySection from "./AcheivementCategorySection/AcheivementCategorySection";
-import HeroSection from "./HeroSection/HeroSection";
+import Navbar from "../../components/navbar/Navbar";
+import Sidebar from "../../components/sidebar/Sidebar";
+import HeroSection from "./heroSection/HeroSection";
 import "./homepage.css";
 
 const Homepage = () => {
@@ -12,7 +11,6 @@ const Homepage = () => {
       <div className="page-container">
         <Sidebar />
         <HeroSection />
-        {/* <AcheivementCategorySection /> */}
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ body{
   overflow-x: hidden;
   max-width: 125rem;
   margin: auto;
-  color: #EFEFEF;
+  color: var(--primary-text-color);
 }
 :root{
   --background-color: #1B1B1B;

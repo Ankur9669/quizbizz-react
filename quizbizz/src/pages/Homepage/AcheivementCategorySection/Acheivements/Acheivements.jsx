@@ -29,7 +29,7 @@ const Acheivements = () => {
             className="img-responsive acheivement-badge"
           />
           <p className="font-medium weight-normal primary-text-color centered-text margin-vertical-xs">
-            Acheiver
+            Achiver
           </p>
         </div>
       </div>

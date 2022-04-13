@@ -1,9 +1,9 @@
 import React from "react";
 import "./herosection.css";
 import Avatar1 from "../../../assets/images/male-avatar.svg";
-import HeroUserInfo from "./HeroUserInfo/HeroUserInfo";
-import Avatar from "./Avatar/Avatar";
-import AcheivementCategorySection from "../AcheivementCategorySection/AcheivementCategorySection";
+import HeroUserInfo from "./heroUserInfo/HeroUserInfo";
+import Avatar from "./avatar/Avatar";
+import AcheivementCategorySection from "../acheivementCategorySection/AcheivementCategorySection";
 
 const HeroSection = () => {
   return (

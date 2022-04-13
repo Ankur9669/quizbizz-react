@@ -1,5 +1,5 @@
 import React from "react";
-import Avatar from "../../Avatar/Avatar";
+import Avatar from "../../avatar/Avatar";
 import Avatar1 from "../../../../../assets/images/male-avatar.svg";
 
 const UserNameContainer = () => {
@@ -11,7 +11,7 @@ const UserNameContainer = () => {
       <p className="font-medium weight-semi-bold primary-text-color">
         gankur860@gmail.com
       </p>
-      {/* <!--  ******************************** Small Avatar on right for tablet and mobile ********************************  --> */}
+      {/* ******************************** Small Avatar on right for tablet and mobile ******************************** */}
       <Avatar
         parentContainerClassName="hero-user-image-container-sm"
         Avatar={Avatar1}

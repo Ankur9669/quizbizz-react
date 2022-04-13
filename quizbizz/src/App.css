@@ -3,8 +3,8 @@
   margin: 0;
 }
 ul{
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 span{
   margin: 0;
@@ -37,9 +37,4 @@ span{
       display: grid;
       grid-template-columns: 1fr;
   }
-  /* .quiz-heading-container .image-container{
-      display: inline-block;
-      max-width: 6.25rem;
-      max-height: 5rem;
-  } */
 }

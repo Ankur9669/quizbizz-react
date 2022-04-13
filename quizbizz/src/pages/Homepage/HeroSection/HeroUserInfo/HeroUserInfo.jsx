@@ -1,9 +1,7 @@
 import React from "react";
-import Avatar from "../Avatar/Avatar";
-import Avatar1 from "../../../../assets/images/male-avatar.svg";
 import "./herouserinfo.css";
-import UserNameContainer from "./UserNameContainer/UserNameContainer";
-import UserProgressContainer from "./UserProgressContainer/UserProgressContainer";
+import UserNameContainer from "./userNameContainer/UserNameContainer";
+import UserProgressContainer from "./userProgressContainer/UserProgressContainer";
 
 const HeroUserInfo = () => {
   return (
