@@ -16,6 +16,7 @@
 .button-outline-secondary{
     background-color: transparent;
     border: 2px solid var(--primary-color);
+    color: var(--primary-text-color);
 }
 .button-outline-secondary:hover{
     background-color: var(--primary-color);
