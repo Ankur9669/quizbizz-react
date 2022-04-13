@@ -20,8 +20,7 @@ const Loginform = () => {
   });
   const [isPasswordVisible, setPasswordVisible] = useState(false);
   // const { user, dispatchUser } = useUser();
-  // const { cart, dispatch: dispatchCart } = useCart();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   // const { showToast } = useToast();
 
   const onSubmitForm = (e) => {
@@ -47,13 +46,6 @@ const Loginform = () => {
       // dispatchUser({
       //   type: "LOGIN",
       //   payload: { value: response.data.foundUser },
-      // });
-
-      // dispatchCart({
-      //   type: "SET_CART",
-      //   payload: {
-      //     value: response.data.foundUser.cart,
-      //   },
       // });
 
       navigate("/");
