@@ -1,0 +1,21 @@
+.user-progress-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.progress-item{
+    display: flex;
+    margin: 2rem 0rem;
+}
+.user-progress-container .progress-item span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    box-shadow: var(--tertiary-color) 0px 0px 0px 2px, var(--tertiary-color) 0px 4px 6px -1px, var(--tertiary-color) 0px 1px 0px inset;
+    padding: 1rem 1.5rem;
+    font-size: 2rem;
+}
+.progress-item-text-container{
+    margin-left: 1rem;
+}
