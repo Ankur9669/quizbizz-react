@@ -1,6 +1,6 @@
 import React from "react";
 import "./navbar.css";
-import { Avatar, AiOutlineMenu, QuizBizz, PrimaryButton } from "./index";
+import { Avatar, AiOutlineMenu, QuizBizz, PrimaryButton, Link } from "./index";
 
 const Navbar = () => {
   return (
@@ -17,7 +17,9 @@ const Navbar = () => {
       </div>
       <div className="nav-items-container-end">
         <div className="login-search-bar-container">
-          <PrimaryButton buttonText="Login" />
+          <Link to="/login">
+            <PrimaryButton buttonText="Login" />
+          </Link>
 
           <div className="input-box">
             <input

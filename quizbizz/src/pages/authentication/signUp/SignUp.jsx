@@ -1,12 +1,14 @@
 import React from "react";
-import Navbar from "../../../components/navbar/Navbar";
 import "../authentication.css";
-import SignupForm from "./SignupForm";
-import AuthenticationBackground from "../AuthenticationBackground";
-import SignUpImage from "../../../assets/images/quizbizz-signup.svg";
-import { useDocumentTitle } from "../../../util/change-document-title";
+import {
+  SignupForm,
+  SignUpImage,
+  AuthenticationBackground,
+  useDocumentTitle,
+  Navbar,
+} from "./index";
 
-function SignUp() {
+const SignUp = () => {
   useDocumentTitle("QuizBizz-SignUp");
   return (
     <div>
@@ -24,6 +26,6 @@ function SignUp() {
       <div className="spacer-3"></div>
     </div>
   );
-}
+};
 
 export default SignUp;

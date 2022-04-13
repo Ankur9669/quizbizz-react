@@ -3,16 +3,17 @@ import {
   AiOutlineMail,
   AiFillEyeInvisible,
   AiFillEye,
-} from "../../../assets/icons/icons";
-import PrimaryButton from "../../../components/buttons/PrimaryButton";
-import SecondaryButton from "../../../components/buttons/SecondaryButton";
-import { Link, useNavigate } from "react-router-dom";
+  PrimaryButton,
+  SecondaryButton,
+  Link,
+  useNavigate,
+} from "./index";
 // import Axios from "axios";
 // import { useUser } from "../../../Context/user-context";
 // import { useToast } from "../../../Context/toast-context";
 // import { PrimaryButton, SecondaryButton } from "../../Cart/HorizontalCard";
 
-function Loginform() {
+const Loginform = () => {
   const [formDetails, setFormDetails] = useState({
     email: "",
     password: "",
@@ -173,6 +174,6 @@ function Loginform() {
       </form>
     </div>
   );
-}
+};
 
 export default Loginform;

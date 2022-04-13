@@ -1,18 +1,19 @@
 import React, { useState } from "react";
+import "../authentication.css";
 import {
   AiOutlineMail,
   AiFillEyeInvisible,
   AiFillEye,
-} from "../../../assets/icons/icons";
-import PrimaryButton from "../../../components/buttons/PrimaryButton";
-import SecondaryButton from "../../../components/buttons/SecondaryButton";
-import { Link } from "react-router-dom";
-import "../authentication.css";
-import Axios from "axios";
+  PrimaryButton,
+  SecondaryButton,
+  Link,
+  Axios,
+} from "./index";
+
 // import { useUser } from "../../../Context/user-context";
 // import { useToast } from "../../../Context/toast-context";
 
-function SignupForm() {
+const SignupForm = () => {
   const [formDetails, setFormDetails] = useState({
     firstName: "",
     lastName: "",
@@ -143,6 +144,6 @@ function SignupForm() {
       </form>
     </div>
   );
-}
+};
 
 export default SignupForm;

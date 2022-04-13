@@ -1,12 +1,14 @@
 import React from "react";
-import Navbar from "../../../components/navbar/Navbar";
-// import { useDocumentTitle } from "../../../Util/change-document-title";
-import AuthenticationBackground from "../AuthenticationBackground";
-import Loginform from "./Loginform";
-import LoginImage from "../../../assets/images/quizbizz-login.svg";
+import {
+  Navbar,
+  useDocumentTitle,
+  AuthenticationBackground,
+  LoginImage,
+  Loginform,
+} from "./index";
 
-function Login() {
-  // useDocumentTitle("FiTbiT-Login");
+const Login = () => {
+  useDocumentTitle("QuizBizz-Login");
   return (
     <div>
       <Navbar />
@@ -23,6 +25,6 @@ function Login() {
       <div className="spacer-3"></div>
     </div>
   );
-}
+};
 
 export default Login;
