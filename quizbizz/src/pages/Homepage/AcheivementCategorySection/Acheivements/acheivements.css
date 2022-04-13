@@ -1,9 +1,0 @@
-.acheivements-badges-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.acheivement-badge-container .acheivement-badge{
-    width: 4.4rem;
-    height: 5.2rem;
-}
