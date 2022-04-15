@@ -7,11 +7,10 @@ import {
   SecondaryButton,
   Link,
   useNavigate,
+  useUser,
+  useToast,
 } from "./index";
-// import Axios from "axios";
-// import { useUser } from "../../../Context/user-context";
-// import { useToast } from "../../../Context/toast-context";
-// import { PrimaryButton, SecondaryButton } from "../../Cart/HorizontalCard";
+import { postApi } from "../../../util/api/postApi";
 
 const Loginform = () => {
   const [formDetails, setFormDetails] = useState({
@@ -19,9 +18,9 @@ const Loginform = () => {
     password: "",
   });
   const [isPasswordVisible, setPasswordVisible] = useState(false);
-  // const { user, dispatchUser } = useUser();
+  const { dispatchUser } = useUser();
   const navigate = useNavigate();
-  // const { showToast } = useToast();
+  const { showToast } = useToast();
 
   const onSubmitForm = (e) => {
     //TODO VALIDATIONS
@@ -30,59 +29,35 @@ const Loginform = () => {
   };
   const loginUser = async () => {
     if (formDetails.email === "" || formDetails.password === "") {
-      // showToast("Please Enter the details first", "ERROR");
+      showToast("Please Enter the details first", "ERROR");
       return;
     }
-    try {
-      const response = await Axios.post("/api/auth/login", {
-        email: formDetails.email,
-        password: formDetails.password,
-      });
-
-      // console.log(response);
-      const token = response.data.encodedToken;
-      localStorage.setItem("token", token);
-
-      // dispatchUser({
-      //   type: "LOGIN",
-      //   payload: { value: response.data.foundUser },
-      // });
-
-      navigate("/");
-    } catch (error) {
-      console.error(error);
-    }
+    //
   };
 
   const loginAsGuest = async (e) => {
     e.preventDefault();
-    try {
-      const response = await Axios.post("/api/auth/login", {
+    const { data, success, message, statusCode } = await postApi(
+      "/api/auth/login",
+      {
         email: "adarshbalika@gmail.com",
         password: "adarshBalika123",
-      });
+      },
+      false
+    );
 
-      console.log(response);
-      const token = response.data.encodedToken;
+    if (success && statusCode === 200) {
+      const token = data.encodedToken;
       localStorage.setItem("token", token);
 
-      // dispatchUser({
-      //   type: "LOGIN",
-      //   payload: { value: response.data.foundUser },
-      // });
-
-      // dispatchCart({
-      //   type: "SET_CART",
-      //   payload: {
-      //     value: response.data.foundUser.cart,
-      //   },
-      // });
-
-      //TODO set wishlist here
-
+      dispatchUser({
+        type: "LOGIN",
+        payload: { value: data.foundUser },
+      });
+      showToast("Login successfull", "SUCCESS");
       navigate("/");
-    } catch (error) {
-      console.error(error);
+    } else {
+      showToast("Something Went wrong", "ERROR");
     }
   };
 

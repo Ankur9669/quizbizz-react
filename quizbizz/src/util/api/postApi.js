@@ -3,15 +3,11 @@ import Axios from "axios";
 const postApi = async (url, body, isAuthRequired) => {
   const token = localStorage.getItem("token");
   try {
-    const response = await Axios.post(
-      url,
-      { body },
-      {
-        headers: {
-          authorization: isAuthRequired ? token : "",
-        },
-      }
-    );
+    const response = await Axios.post(url, body, {
+      headers: {
+        authorization: isAuthRequired ? token : "",
+      },
+    });
 
     return {
       data: response.data,
@@ -24,7 +20,7 @@ const postApi = async (url, body, isAuthRequired) => {
     return {
       data: "",
       success: false,
-      statusCode: response.status,
+      statusCode: e.status,
       message: `SomeThing went wrong ${e}`,
     };
   }

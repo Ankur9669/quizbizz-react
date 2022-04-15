@@ -11,6 +11,8 @@ import {
 import PrimaryButton from "../../../components/buttons/PrimaryButton";
 import SecondaryButton from "../../../components/buttons/SecondaryButton";
 import { Link, useNavigate } from "react-router-dom";
+import { useUser } from "../../../context/user-context";
+import { useToast } from "../../../context/toast-context";
 
 export {
   Navbar,
@@ -25,4 +27,6 @@ export {
   SecondaryButton,
   Link,
   useNavigate,
+  useUser,
+  useToast,
 };
