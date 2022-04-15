@@ -32,7 +32,28 @@ const Loginform = () => {
       showToast("Please Enter the details first", "ERROR");
       return;
     }
-    //
+
+    const { data, success, message, statusCode } = await postApi(
+      "/api/auth/login",
+      {
+        email: formDetails.email,
+        password: formDetails.password,
+      },
+      false
+    );
+
+    if (success && statusCode === 200) {
+      const token = data.encodedToken;
+      localStorage.setItem("token", token);
+      dispatchUser({
+        type: "LOGIN",
+        payload: { value: data.foundUser },
+      });
+      showToast("Login successfull", "SUCCESS");
+      navigate("/");
+    } else {
+      showToast("Something Went wrong", "ERROR");
+    }
   };
 
   const loginAsGuest = async (e) => {
@@ -49,7 +70,6 @@ const Loginform = () => {
     if (success && statusCode === 200) {
       const token = data.encodedToken;
       localStorage.setItem("token", token);
-
       dispatchUser({
         type: "LOGIN",
         payload: { value: data.foundUser },
