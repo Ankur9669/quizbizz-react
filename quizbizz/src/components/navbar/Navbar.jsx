@@ -1,8 +1,14 @@
 import React from "react";
 import "./navbar.css";
 import { Avatar, AiOutlineMenu, QuizBizz, PrimaryButton, Link } from "./index";
+import { useUser } from "../../context/user-context";
 
 const Navbar = () => {
+  const { user, dispatchUser } = useUser();
+
+  const handleLogoutClick = () => {
+    dispatchUser({ type: "LOGOUT" });
+  };
   return (
     <nav className="navbar">
       <div>
@@ -17,9 +23,13 @@ const Navbar = () => {
       </div>
       <div className="nav-items-container-end">
         <div className="login-search-bar-container">
-          <Link to="/login">
-            <PrimaryButton buttonText="Login" />
-          </Link>
+          {!user.isUserLoggedIn ? (
+            <Link to="/login">
+              <PrimaryButton buttonText="Login" />
+            </Link>
+          ) : (
+            <PrimaryButton buttonText="Logout" onClick={handleLogoutClick} />
+          )}
 
           <div className="input-box">
             <input
