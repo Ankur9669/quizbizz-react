@@ -5,6 +5,7 @@ import Login from "./pages/authentication/login/Login";
 import SignUp from "./pages/authentication/signUp/SignUp";
 import Toasts from "./util/toasts/Toasts";
 import MockMan from "mockman-js";
+import QuizInstruction from "./pages/quizinstruction/QuizInstruction";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/quizinstruction" element={<QuizInstruction />} />
         <Route path="/mock" element={<MockMan />} />
       </Routes>
     </div>
