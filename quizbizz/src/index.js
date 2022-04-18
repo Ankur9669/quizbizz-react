@@ -4,6 +4,8 @@ import "./index.css";
 import App from "./App";
 import { makeServer } from "./server";
 import { BrowserRouter as Router } from "react-router-dom";
+import { ToastProvider } from "./context/toast-context";
+import { UserProvider } from "./context/user-context";
 
 // Call make Server
 makeServer();
@@ -11,7 +13,11 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <App />
+      <UserProvider>
+        <ToastProvider>
+          <App />
+        </ToastProvider>
+      </UserProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

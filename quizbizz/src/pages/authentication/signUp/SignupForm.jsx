@@ -7,11 +7,11 @@ import {
   PrimaryButton,
   SecondaryButton,
   Link,
-  Axios,
+  postApi,
+  useToast,
+  useUser,
+  useNavigate,
 } from "./index";
-
-// import { useUser } from "../../../Context/user-context";
-// import { useToast } from "../../../Context/toast-context";
 
 const SignupForm = () => {
   const [formDetails, setFormDetails] = useState({
@@ -21,48 +21,56 @@ const SignupForm = () => {
     password: "",
   });
   const [isPasswordVisible, setPasswordVisible] = useState(false);
-  // const { user, dispatchUser } = useUser();
-  // const { showToast } = useToast();
+  const { dispatchUser } = useUser();
+  const { showToast } = useToast();
+  const navigate = useNavigate();
 
   const onSubmitForm = (e) => {
     //TODO VALIDATIONS
     e.preventDefault();
-    signUpUser();
-  };
 
-  const signUpUser = async () => {
     if (
       formDetails.email === "" ||
       formDetails.firstName === "" ||
       formDetails.lastName === "" ||
       formDetails.password === ""
     ) {
-      // showToast("Please Enter the details first", "ERROR");
+      showToast("Please Enter the details first", "ERROR");
       return;
     }
-    try {
-      const response = await Axios.post("/api/auth/signup", {
+    signUpUser();
+  };
+
+  const signUpUser = async () => {
+    const { data, success, message, statusCode } = await postApi(
+      "/api/auth/signup",
+      {
         firstName: formDetails.firstName,
         lastName: formDetails.lastName,
         email: formDetails.email,
         password: formDetails.password,
-      });
+      },
+      false
+    );
 
-      const token = response.data.encodedToken;
+    if (success && statusCode === 201) {
+      const token = data.encodedToken;
       localStorage.setItem("token", token);
 
-      // dispatchUser({
-      //   type: "LOGIN",
-      //   payload: { value: response.data.createdUser },
-      // });
-    } catch (error) {
-      console.error(error);
+      dispatchUser({
+        type: "LOGIN",
+        payload: { value: data.createdUser },
+      });
+      showToast("Signup successfull", "SUCCESS");
+      navigate("/");
+    } else {
+      showToast("Something Went wrong", "ERROR");
     }
   };
 
   return (
     <div className="authentication-form-container">
-      <form className="authentication-form">
+      <form className="authentication-form" onSubmit={onSubmitForm}>
         <h2 className="font-large weight-semi-bold authentication-form-heading">
           <span className="logo-text font-large">Quiz</span>
           <span className="primary-color font-large">Bizz</span>
@@ -132,7 +140,7 @@ const SignupForm = () => {
         <PrimaryButton
           buttonText="Create New Account"
           className="form-cta-button"
-          onClick={(e) => onSubmitForm(e)}
+          type="submit"
         />
 
         <Link to="/login">
