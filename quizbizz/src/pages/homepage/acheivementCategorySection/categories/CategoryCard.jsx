@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const CategoryCard = ({ cardTitle, cardImage }) => {
+const CategoryCard = ({ cardTitle, cardImage, quizId }) => {
   return (
-    <Link to="/quizinstruction" className="card card-only-image card-hover">
+    <Link
+      to={`/quizinstruction/${quizId}`}
+      className="card card-only-image card-hover"
+    >
       <div className="text-overlay">
         <p className="font-medium-large weight-semi-bold">{cardTitle}</p>
       </div>
