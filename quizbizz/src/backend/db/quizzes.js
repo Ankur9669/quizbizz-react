@@ -1,9 +1,186 @@
 export const quizzes = [
   {
     _id: "1",
-    quizName: "React",
+    quizName: "Javascript",
+    quizImage:
+      "https://github.com/Ankur9669/quizbizz-react/blob/dev/quizbizz/src/assets/images/javascript.png",
+    questions: [
+      {
+        questionNumber: 1,
+        question: "What is Javascript",
+        options: [
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+        ],
+      },
+      {
+        questionNumber: 2,
+        question: "What is React",
+        options: [
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+        ],
+      },
+      {
+        questionNumber: 3,
+        question: "What is React",
+        options: [
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+        ],
+      },
+      {
+        questionNumber: 4,
+        question: "What is React",
+        options: [
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+        ],
+      },
+      {
+        questionNumber: 5,
+        question: "What is React",
+        options: [
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+        ],
+      },
+    ],
+    answers: ["a", "b", "c", "d", "a"],
+  },
+  {
+    _id: "2",
+    quizName: "CSS",
     quizImage:
       "https://github.com/Ankur9669/quizbizz-react/blob/dev/quizbizz/src/assets/images/css.png",
+    questions: [
+      {
+        questionNumber: 1,
+        question: "What is CSS",
+        options: [
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+        ],
+      },
+      {
+        questionNumber: 2,
+        question: "What is React",
+        options: [
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+        ],
+      },
+      {
+        questionNumber: 3,
+        question: "What is React",
+        options: [
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+        ],
+      },
+      {
+        questionNumber: 4,
+        question: "What is React",
+        options: [
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+        ],
+      },
+      {
+        questionNumber: 5,
+        question: "What is React",
+        options: [
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+        ],
+      },
+    ],
+    answers: ["a", "b", "c", "d", "a"],
+  },
+  {
+    _id: "3",
+    quizName: "React",
+    quizImage:
+      "https://github.com/Ankur9669/quizbizz-react/blob/dev/quizbizz/src/assets/images/raect.png",
+    questions: [
+      {
+        questionNumber: 1,
+        question: "What is React",
+        options: [
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+        ],
+      },
+      {
+        questionNumber: 2,
+        question: "What is React",
+        options: [
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+        ],
+      },
+      {
+        questionNumber: 3,
+        question: "What is React",
+        options: [
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+        ],
+      },
+      {
+        questionNumber: 4,
+        question: "What is React",
+        options: [
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+        ],
+      },
+      {
+        questionNumber: 5,
+        question: "What is React",
+        options: [
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+          "It is awesome",
+        ],
+      },
+    ],
+    answers: ["a", "b", "c", "d", "a"],
+  },
+  {
+    _id: "4",
+    quizName: "Java",
+    quizImage:
+      "https://github.com/Ankur9669/quizbizz-react/blob/dev/quizbizz/src/assets/images/java.jpeg",
     questions: [
       {
         questionNumber: 1,
