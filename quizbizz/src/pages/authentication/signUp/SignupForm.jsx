@@ -140,7 +140,6 @@ const SignupForm = () => {
         <PrimaryButton
           buttonText="Create New Account"
           className="form-cta-button"
-          // onClick={(e) => onSubmitForm(e)}
           type="submit"
         />
 

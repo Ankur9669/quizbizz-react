@@ -15,11 +15,12 @@ const fetchApi = async (url, body, isAuthRequired) => {
 
     return {
       data: response.data,
+      statusCode: response.status,
       success: true,
       message: "Api Request Successfull",
     };
   } catch (e) {
-    console.log(e);
+    console.error(e);
     return {
       data: "",
       success: false,
