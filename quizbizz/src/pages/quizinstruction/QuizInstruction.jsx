@@ -3,6 +3,7 @@ import CssImage from "../../assets/images/css.png";
 import "./quizinstruction.css";
 import { Sidebar, Navbar, fetchApi, useToast } from "./index";
 import { useQuiz } from "../../context/quiz-context";
+import { useParams } from "react-router-dom";
 
 const QuizInstruction = () => {
   const today = new Date();
@@ -13,7 +14,8 @@ const QuizInstruction = () => {
     quizImage: "",
     quizName: "Loading...",
   });
-  const { quiz, setQuiz } = useQuiz();
+  const { setQuiz } = useQuiz();
+  const { quizId } = useParams();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -22,7 +24,7 @@ const QuizInstruction = () => {
 
   const fetchQuiz = async () => {
     const { data, success, statusCode, message } = await fetchApi(
-      "/api/quiz/1",
+      `/api/quiz/${quizId}`,
       {},
       false
     );
@@ -50,7 +52,7 @@ const QuizInstruction = () => {
             </div>
             <div className="image-container">
               <img
-                src={quizDetails.quizImage}
+                src="/images/css.png"
                 className="img-responsive quiz-info-image"
                 alt="quiz-name"
               />
@@ -61,7 +63,7 @@ const QuizInstruction = () => {
           <div className="quiz-info-container">
             <div className="image-container">
               <img
-                src={CssImage}
+                src={quizDetails.quizImage}
                 className="img-responsive quiz-info-image"
                 alt="quiz-name"
               />

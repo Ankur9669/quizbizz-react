@@ -2,8 +2,7 @@ export const quizzes = [
   {
     _id: "1",
     quizName: "Javascript",
-    quizImage:
-      "https://github.com/Ankur9669/quizbizz-react/blob/dev/quizbizz/src/assets/images/javascript.png",
+    quizImage: "/images/javascript.png",
     questions: [
       {
         questionNumber: 1,
@@ -61,8 +60,7 @@ export const quizzes = [
   {
     _id: "2",
     quizName: "CSS",
-    quizImage:
-      "https://github.com/Ankur9669/quizbizz-react/blob/dev/quizbizz/src/assets/images/css.png",
+    quizImage: "/images/css.png",
     questions: [
       {
         questionNumber: 1,
@@ -120,8 +118,7 @@ export const quizzes = [
   {
     _id: "3",
     quizName: "React",
-    quizImage:
-      "https://github.com/Ankur9669/quizbizz-react/blob/dev/quizbizz/src/assets/images/raect.png",
+    quizImage: "/images/react.png",
     questions: [
       {
         questionNumber: 1,
@@ -179,8 +176,7 @@ export const quizzes = [
   {
     _id: "4",
     quizName: "Java",
-    quizImage:
-      "https://github.com/Ankur9669/quizbizz-react/blob/dev/quizbizz/src/assets/images/java.jpeg",
+    quizImage: "/images/java.jpeg",
     questions: [
       {
         questionNumber: 1,
@@ -236,6 +232,3 @@ export const quizzes = [
     answers: ["a", "b", "c", "d"],
   },
 ];
-// https://github.com/Ankur9669/quizbizz-react/blob/dev/quizbizz/src/assets/images/java.jpeg
-// https://github.com/Ankur9669/quizbizz-react/blob/dev/quizbizz/src/assets/images/javascript.png
-// https://github.com/Ankur9669/quizbizz-react/blob/dev/quizbizz/src/assets/images/react.png
