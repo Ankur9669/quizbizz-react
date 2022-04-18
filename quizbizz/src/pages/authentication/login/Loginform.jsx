@@ -9,8 +9,9 @@ import {
   useNavigate,
   useUser,
   useToast,
+  postApi,
+  useLocation,
 } from "./index";
-import { postApi } from "../../../util/api/postApi";
 
 const Loginform = () => {
   const [formDetails, setFormDetails] = useState({
@@ -21,6 +22,8 @@ const Loginform = () => {
   const { dispatchUser } = useUser();
   const navigate = useNavigate();
   const { showToast } = useToast();
+  const location = useLocation();
+  const from = location?.state?.from?.pathname || "/";
 
   const onSubmitForm = (e) => {
     //TODO VALIDATIONS
@@ -50,7 +53,7 @@ const Loginform = () => {
         payload: { value: data.foundUser },
       });
       showToast("Login successfull", "SUCCESS");
-      navigate("/");
+      navigate(from);
     } else {
       showToast("Something Went wrong", "ERROR");
     }
@@ -75,7 +78,7 @@ const Loginform = () => {
         payload: { value: data.foundUser },
       });
       showToast("Login successfull", "SUCCESS");
-      navigate("/");
+      navigate(from);
     } else {
       showToast("Something Went wrong", "ERROR");
     }
