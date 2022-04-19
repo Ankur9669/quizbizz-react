@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 const QuizContext = createContext();
 
 const QuizProvider = ({ children }) => {
-  const [quiz, setQuiz] = useState({});
+  const [quiz, setQuiz] = useState(null);
   return (
     <QuizContext.Provider value={{ quiz, setQuiz }}>
       {children}

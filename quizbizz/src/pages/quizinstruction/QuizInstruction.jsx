@@ -3,7 +3,7 @@ import CssImage from "../../assets/images/css.png";
 import "./quizinstruction.css";
 import { Sidebar, Navbar, fetchApi, useToast } from "./index";
 import { useQuiz } from "../../context/quiz-context";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const QuizInstruction = () => {
   const today = new Date();
@@ -135,7 +135,12 @@ const QuizInstruction = () => {
           {/* <!--  ******************************** Quiz Instructions Container End ********************************  --> */}
 
           <div className="quiz-btn-container">
-            <a className="button button-primary quiz-button">Start</a>
+            <Link
+              to="/quizquestion"
+              className="button button-primary quiz-button"
+            >
+              Start
+            </Link>
           </div>
         </div>
       </main>

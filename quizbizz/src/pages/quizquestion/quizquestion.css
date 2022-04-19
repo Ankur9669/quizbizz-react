@@ -1,0 +1,25 @@
+.quiz-question-container{
+    max-width: 60rem;
+}
+.quiz-question{
+    margin: 0rem 2rem;
+}
+.quiz-options-container{
+    margin: 2rem 2rem 0 2rem;
+}
+.quiz-option, .quiz-option label{
+    cursor: pointer;
+}
+.timer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 1145px){
+    .quiz-info-container{
+        grid-template-columns: 1fr;
+    }
+    .quiz-info-container .image-container{
+        display: none;
+    }
+}
