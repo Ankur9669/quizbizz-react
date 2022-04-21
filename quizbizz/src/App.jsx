@@ -7,6 +7,7 @@ import Toasts from "./util/toasts/Toasts";
 import MockMan from "mockman-js";
 import QuizInstruction from "./pages/quizinstruction/QuizInstruction";
 
+
 function App() {
   return (
     <div className="App">
