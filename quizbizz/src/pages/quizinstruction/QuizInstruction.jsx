@@ -5,6 +5,7 @@ import { Sidebar, Navbar, fetchApi, useToast } from "./index";
 import { useQuiz } from "../../context/quiz-context";
 import { useParams } from "react-router-dom";
 
+
 const QuizInstruction = () => {
   const today = new Date();
   const todaysDate =
@@ -37,6 +38,7 @@ const QuizInstruction = () => {
       showToast("Something Went Wrong", "ERROR");
     }
   };
+
   return (
     <div>
       <Navbar />

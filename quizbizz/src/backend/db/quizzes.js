@@ -232,3 +232,4 @@ export const quizzes = [
     answers: ["a", "b", "c", "d"],
   },
 ];
+
