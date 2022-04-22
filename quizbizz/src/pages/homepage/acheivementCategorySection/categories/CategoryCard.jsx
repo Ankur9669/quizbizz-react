@@ -6,7 +6,7 @@ const CategoryCard = ({ cardTitle, cardImage, quizId }) => {
     <Link
       to={`/quizinstruction/${quizId}`}
       className="card card-only-image card-hover"
-    >
+    />
       <div className="text-overlay">
         <p className="font-medium-large weight-semi-bold">{cardTitle}</p>
       </div>

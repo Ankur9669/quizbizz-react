@@ -8,6 +8,7 @@ import MockMan from "mockman-js";
 import QuizInstruction from "./pages/quizinstruction/QuizInstruction";
 import RequiredAuth from "./components/require-auth/RequiredAuth";
 
+
 function App() {
   return (
     <div className="App">
