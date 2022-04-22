@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import "./quizquestion.css";
 
 const QuizQuestion = () => {
-  const { quiz, setQuiz } = useQuiz();
+  const { quiz, setQuiz, answersSelected, setAnswersSelected } = useQuiz();
   const navigate = useNavigate();
 
   //   if (quiz === null) {
@@ -17,6 +17,7 @@ const QuizQuestion = () => {
   const quizName = quiz?.quizName;
   const quizImage = quiz?.quizImage;
   const [questionToShow, setQuestionToShow] = useState(0);
+  const [optionSelected, setOptionSelected] = useState("");
   const questions = quiz?.questions;
   const question = questions?.[questionToShow];
   const options = question?.options;
@@ -28,13 +29,19 @@ const QuizQuestion = () => {
       return;
     }
     setQuestionToShow((prev) => prev + 1);
+    setOptionSelected("");
   };
+
   const handlePrevButtonClick = () => {
     if (questionToShow - 1 < 0) {
       return;
     }
     setQuestionToShow((prev) => prev - 1);
+    setOptionSelected("");
   };
+
+  const handleInputChange = (index) => {};
+
   return (
     <div>
       <Navbar />
@@ -90,7 +97,18 @@ const QuizQuestion = () => {
               {options.map((item, index) => (
                 <div>
                   <li className="quiz-option">
-                    <input type="radio" name="option" id={index} required />
+                    <input
+                      type="radio"
+                      name="option"
+                      id={index}
+                      onChange={() =>
+                        setOptionSelected(String.fromCharCode(index + 97))
+                      }
+                      checked={
+                        optionSelected === String.fromCharCode(index + 97)
+                      }
+                      required
+                    />
                     <label
                       htmlFor={index}
                       className="margin-horizontal-lg font-medium-large weight-semi-bold"
