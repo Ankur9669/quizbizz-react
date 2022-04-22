@@ -21,7 +21,8 @@
 }
 .quiz-info-container .image-container{
     margin: 0 2rem;
-    max-height: 18.75rem;
+    max-height: 250px;
+
     max-width: 25rem;
 }
 .quiz-info-image{

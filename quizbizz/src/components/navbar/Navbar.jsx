@@ -15,11 +15,11 @@ const Navbar = () => {
         <AiOutlineMenu className="hamburger-icon" />
       </div>
       <div className="logo-container">
-        <div className="logo">
+        <Link to="/" className="logo">
           <img src={QuizBizz} alt="quizbizz" className="logo-image" />
           <span className="logo-text">Quiz</span>
           <span className="logo-sub-text primary-color">Bizz</span>
-        </div>
+        </Link>
       </div>
       <div className="nav-items-container-end">
         <div className="login-search-bar-container">

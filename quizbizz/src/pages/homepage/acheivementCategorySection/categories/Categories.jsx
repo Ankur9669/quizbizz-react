@@ -15,12 +15,16 @@ const Categories = () => {
         Categories
       </p>
       <div className="categories-cards-container">
-        <CategoryCard cardTitle="Javascript" cardImage={JavaScriptImage} />
-        <CategoryCard cardTitle="CSS" cardImage={CssImage} />
+        <CategoryCard
+          cardTitle="Javascript"
+          cardImage={JavaScriptImage}
+          quizId="1"
+        />
+        <CategoryCard cardTitle="CSS" cardImage={CssImage} quizId="2" />
       </div>
       <div className="categories-cards-container">
-        <CategoryCard cardTitle="React" cardImage={ReactImage} />
-        <CategoryCard cardTitle="Java" cardImage={JavaImage} />
+        <CategoryCard cardTitle="React" cardImage={ReactImage} quizId="3" />
+        <CategoryCard cardTitle="Java" cardImage={JavaImage} quizId="4" />
       </div>
       <div className="spacer-2"></div>
     </div>

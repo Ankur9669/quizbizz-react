@@ -6,6 +6,7 @@ import SignUp from "./pages/authentication/signUp/SignUp";
 import Toasts from "./util/toasts/Toasts";
 import MockMan from "mockman-js";
 import QuizInstruction from "./pages/quizinstruction/QuizInstruction";
+import RequiredAuth from "./components/require-auth/RequiredAuth";
 
 
 function App() {
@@ -16,7 +17,14 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/quizinstruction" element={<QuizInstruction />} />
+        <Route
+          path="/quizinstruction/:quizId"
+          element={
+            <RequiredAuth>
+              <QuizInstruction />
+            </RequiredAuth>
+          }
+        />
         <Route path="/mock" element={<MockMan />} />
       </Routes>
     </div>

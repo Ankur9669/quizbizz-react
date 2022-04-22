@@ -1,5 +1,5 @@
 .toasts-container{
-    z-index: 1000;
+    z-index: var(--z-index-highest);
     position: fixed;
     top: 1rem;
     right: 10px;
