@@ -22,7 +22,7 @@ const QuizQuestion = () => {
   const question = questions?.[questionToShow];
   const options = question?.options;
 
-  console.log(options);
+  // console.log(options);
 
   const handleNextButtonClick = () => {
     if (questionToShow + 1 >= questions.length) {
@@ -40,7 +40,15 @@ const QuizQuestion = () => {
     setOptionSelected("");
   };
 
-  const handleInputChange = (index) => {};
+  const handleInputChange = (index) => {
+    let tempAnswers = answersSelected;
+    tempAnswers[questionToShow] = String.fromCharCode(index + 97);
+    setAnswersSelected([...tempAnswers]);
+  };
+
+  // useEffect(() => {
+  //   console.log(answersSelected);
+  // }, [answersSelected]);
 
   return (
     <div>
@@ -101,11 +109,12 @@ const QuizQuestion = () => {
                       type="radio"
                       name="option"
                       id={index}
-                      onChange={() =>
-                        setOptionSelected(String.fromCharCode(index + 97))
-                      }
+                      onChange={() => {
+                        handleInputChange(index);
+                      }}
                       checked={
-                        optionSelected === String.fromCharCode(index + 97)
+                        String.fromCharCode(index + 97) ===
+                        answersSelected[questionToShow]
                       }
                       required
                     />
