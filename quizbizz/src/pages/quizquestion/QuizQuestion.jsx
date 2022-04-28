@@ -3,11 +3,13 @@ import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import { useQuiz } from "../../context/quiz-context";
 import { useNavigate } from "react-router-dom";
+import { useToast } from "../../context/toast-context";
 import "./quizquestion.css";
 
 const QuizQuestion = () => {
   const { quiz, setQuiz, answersSelected, setAnswersSelected } = useQuiz();
   const navigate = useNavigate();
+  const { showToast } = useToast();
 
   //   if (quiz === null) {
   //     navigate("/");
@@ -17,7 +19,6 @@ const QuizQuestion = () => {
   const quizName = quiz?.quizName;
   const quizImage = quiz?.quizImage;
   const [questionToShow, setQuestionToShow] = useState(0);
-  const [optionSelected, setOptionSelected] = useState("");
   const questions = quiz?.questions;
   const question = questions?.[questionToShow];
   const options = question?.options;
@@ -28,16 +29,25 @@ const QuizQuestion = () => {
     if (questionToShow + 1 >= questions.length) {
       return;
     }
-    setQuestionToShow((prev) => prev + 1);
-    setOptionSelected("");
+    if (
+      answersSelected[questionToShow] !== "" &&
+      answersSelected[questionToShow] !== undefined
+    ) {
+      setQuestionToShow((prev) => prev + 1);
+    } else {
+      showToast("Please Select a option first", "ERROR");
+    }
   };
 
   const handlePrevButtonClick = () => {
     if (questionToShow - 1 < 0) {
       return;
     }
-    setQuestionToShow((prev) => prev - 1);
-    setOptionSelected("");
+    if (answersSelected[questionToShow] !== "") {
+      setQuestionToShow((prev) => prev - 1);
+    } else {
+      showToast("Please Select a option first", "ERROR");
+    }
   };
 
   const handleInputChange = (index) => {
@@ -45,10 +55,6 @@ const QuizQuestion = () => {
     tempAnswers[questionToShow] = String.fromCharCode(index + 97);
     setAnswersSelected([...tempAnswers]);
   };
-
-  // useEffect(() => {
-  //   console.log(answersSelected);
-  // }, [answersSelected]);
 
   return (
     <div>
