@@ -15,6 +15,7 @@
     justify-content: center;
     align-items: center;
 }
+
 @media only screen and (max-width: 1145px){
     .quiz-info-container{
         grid-template-columns: 1fr;

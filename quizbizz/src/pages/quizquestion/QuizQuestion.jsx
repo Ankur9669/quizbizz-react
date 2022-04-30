@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../../components/navbar/Navbar";
-import Sidebar from "../../components/sidebar/Sidebar";
-import { useQuiz } from "../../context/quiz-context";
-import { useNavigate } from "react-router-dom";
-import { useToast } from "../../context/toast-context";
+import {
+  Navbar,
+  Sidebar,
+  useQuiz,
+  useNavigate,
+  useToast,
+  AiOutlineLeft,
+  AiOutlineRight,
+} from "./index";
 import "./quizquestion.css";
 
 const QuizQuestion = () => {
@@ -17,6 +21,10 @@ const QuizQuestion = () => {
   const questions = quiz?.questions;
   const question = questions?.[questionToShow];
   const options = question?.options;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleNextButtonClick = () => {
     if (questionToShow + 1 >= questions.length) {
@@ -102,7 +110,7 @@ const QuizQuestion = () => {
 
             <ul className="list-style-none" aria-label="options">
               {options.map((item, index) => (
-                <div>
+                <div key={index}>
                   <li className="quiz-option">
                     <input
                       type="radio"
@@ -138,7 +146,6 @@ const QuizQuestion = () => {
               className="button button-primary quiz-button prev-button"
               aria-label="previous-button"
             >
-              <i className="fa fa-angle-left" aria-hidden="true"></i>
               Prev Question
             </button>
             {question.questionNumber < questions.length ? (
@@ -148,7 +155,6 @@ const QuizQuestion = () => {
                 aria-label="next-button"
               >
                 Next Question
-                <i className="fa fa-angle-right" aria-hidden="true"></i>
               </button>
             ) : (
               <button

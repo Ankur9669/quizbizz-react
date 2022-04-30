@@ -25,7 +25,14 @@ function App() {
             </RequiredAuth>
           }
         />
-        <Route path="/quizquestion" element={<QuizQuestion />}></Route>
+        <Route
+          path="/quizquestion"
+          element={
+            <RequiredAuth>
+              <QuizQuestion />
+            </RequiredAuth>
+          }
+        ></Route>
         <Route path="/mock" element={<MockMan />} />
       </Routes>
     </div>
