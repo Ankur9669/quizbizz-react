@@ -11,19 +11,12 @@ const QuizQuestion = () => {
   const navigate = useNavigate();
   const { showToast } = useToast();
 
-  //   if (quiz === null) {
-  //     navigate("/");
-  //     return null;
-  //   }
-
   const quizName = quiz?.quizName;
   const quizImage = quiz?.quizImage;
   const [questionToShow, setQuestionToShow] = useState(0);
   const questions = quiz?.questions;
   const question = questions?.[questionToShow];
   const options = question?.options;
-
-  // console.log(options);
 
   const handleNextButtonClick = () => {
     if (questionToShow + 1 >= questions.length) {
