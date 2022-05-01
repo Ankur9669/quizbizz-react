@@ -16,7 +16,6 @@ import { useToast } from "../../../context/toast-context";
 import { postApi } from "../../../util/api/postApi";
 import { Location, useLocation } from "react-router-dom";
 
-
 export {
   Navbar,
   useDocumentTitle,
@@ -34,5 +33,4 @@ export {
   useToast,
   postApi,
   useLocation,
-
 };

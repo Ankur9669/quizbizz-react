@@ -7,7 +7,7 @@ import Toasts from "./util/toasts/Toasts";
 import MockMan from "mockman-js";
 import QuizInstruction from "./pages/quizinstruction/QuizInstruction";
 import RequiredAuth from "./components/require-auth/RequiredAuth";
-
+import QuizQuestion from "./pages/quizquestion/QuizQuestion";
 
 function App() {
   return (
@@ -25,6 +25,14 @@ function App() {
             </RequiredAuth>
           }
         />
+        <Route
+          path="/quizquestion"
+          element={
+            <RequiredAuth>
+              <QuizQuestion />
+            </RequiredAuth>
+          }
+        ></Route>
         <Route path="/mock" element={<MockMan />} />
       </Routes>
     </div>

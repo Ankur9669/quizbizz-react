@@ -6,7 +6,7 @@ export const quizzes = [
     questions: [
       {
         questionNumber: 1,
-        question: "What is Javascript",
+        question: "What is Javascript ?",
         options: [
           "It is awesome",
           "It is awesome",
@@ -16,7 +16,7 @@ export const quizzes = [
       },
       {
         questionNumber: 2,
-        question: "What is React",
+        question: "What is React ?",
         options: [
           "It is awesome",
           "It is awesome",
@@ -26,7 +26,7 @@ export const quizzes = [
       },
       {
         questionNumber: 3,
-        question: "What is React",
+        question: "What is React ?",
         options: [
           "It is awesome",
           "It is awesome",
@@ -36,7 +36,7 @@ export const quizzes = [
       },
       {
         questionNumber: 4,
-        question: "What is React",
+        question: "What is React ?",
         options: [
           "It is awesome",
           "It is awesome",
@@ -46,7 +46,7 @@ export const quizzes = [
       },
       {
         questionNumber: 5,
-        question: "What is React",
+        question: "What is React ?",
         options: [
           "It is awesome",
           "It is awesome",
@@ -64,7 +64,7 @@ export const quizzes = [
     questions: [
       {
         questionNumber: 1,
-        question: "What is CSS",
+        question: "What is CSS ?",
         options: [
           "It is awesome",
           "It is awesome",
@@ -74,7 +74,7 @@ export const quizzes = [
       },
       {
         questionNumber: 2,
-        question: "What is React",
+        question: "What is React ?",
         options: [
           "It is awesome",
           "It is awesome",
@@ -84,7 +84,7 @@ export const quizzes = [
       },
       {
         questionNumber: 3,
-        question: "What is React",
+        question: "What is React ?",
         options: [
           "It is awesome",
           "It is awesome",
@@ -94,7 +94,7 @@ export const quizzes = [
       },
       {
         questionNumber: 4,
-        question: "What is React",
+        question: "What is React ?",
         options: [
           "It is awesome",
           "It is awesome",
@@ -104,7 +104,7 @@ export const quizzes = [
       },
       {
         questionNumber: 5,
-        question: "What is React",
+        question: "What is React ?",
         options: [
           "It is awesome",
           "It is awesome",
@@ -122,7 +122,7 @@ export const quizzes = [
     questions: [
       {
         questionNumber: 1,
-        question: "What is React",
+        question: "What is React ?",
         options: [
           "It is awesome",
           "It is awesome",
@@ -132,7 +132,7 @@ export const quizzes = [
       },
       {
         questionNumber: 2,
-        question: "What is React",
+        question: "What is React ?",
         options: [
           "It is awesome",
           "It is awesome",
@@ -142,7 +142,7 @@ export const quizzes = [
       },
       {
         questionNumber: 3,
-        question: "What is React",
+        question: "What is React ?",
         options: [
           "It is awesome",
           "It is awesome",
@@ -152,7 +152,7 @@ export const quizzes = [
       },
       {
         questionNumber: 4,
-        question: "What is React",
+        question: "What is React ?",
         options: [
           "It is awesome",
           "It is awesome",
@@ -162,7 +162,7 @@ export const quizzes = [
       },
       {
         questionNumber: 5,
-        question: "What is React",
+        question: "What is React ?",
         options: [
           "It is awesome",
           "It is awesome",
@@ -180,7 +180,7 @@ export const quizzes = [
     questions: [
       {
         questionNumber: 1,
-        question: "What is React",
+        question: "What is React ?",
         options: [
           "It is awesome",
           "It is awesome",
@@ -190,7 +190,7 @@ export const quizzes = [
       },
       {
         questionNumber: 2,
-        question: "What is React",
+        question: "What is React ?",
         options: [
           "It is awesome",
           "It is awesome",
@@ -200,7 +200,7 @@ export const quizzes = [
       },
       {
         questionNumber: 3,
-        question: "What is React",
+        question: "What is React ?",
         options: [
           "It is awesome",
           "It is awesome",
@@ -210,7 +210,7 @@ export const quizzes = [
       },
       {
         questionNumber: 4,
-        question: "What is React",
+        question: "What is React ?",
         options: [
           "It is awesome",
           "It is awesome",
@@ -220,7 +220,7 @@ export const quizzes = [
       },
       {
         questionNumber: 5,
-        question: "What is React",
+        question: "What is React ?",
         options: [
           "It is awesome",
           "It is awesome",
@@ -232,4 +232,3 @@ export const quizzes = [
     answers: ["a", "b", "c", "d"],
   },
 ];
-

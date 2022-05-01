@@ -13,7 +13,6 @@ import {
   useLocation,
 } from "./index";
 
-
 const Loginform = () => {
   const [formDetails, setFormDetails] = useState({
     email: "",
@@ -25,7 +24,6 @@ const Loginform = () => {
   const { showToast } = useToast();
   const location = useLocation();
   const from = location?.state?.from?.pathname || "/";
-
 
   const onSubmitForm = (e) => {
     //TODO VALIDATIONS

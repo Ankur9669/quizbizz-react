@@ -4,6 +4,8 @@ import {
   AiFillEyeInvisible,
   AiFillEye,
   AiFillCloseSquare,
+  AiOutlineLeft,
+  AiOutlineRight,
 } from "react-icons/ai";
 import { FaCube, FaHeadphones, FaFlag, FaCheck } from "react-icons/fa";
 import { MdOutlineWatchLater } from "react-icons/md";
@@ -14,6 +16,8 @@ export {
   AiFillEyeInvisible,
   AiFillEye,
   AiFillCloseSquare,
+  AiOutlineLeft,
+  AiOutlineRight,
   FaCube,
   FaHeadphones,
   FaCheck,
