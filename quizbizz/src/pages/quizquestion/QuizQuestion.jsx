@@ -164,7 +164,6 @@ const QuizQuestion = () => {
                 aria-label="next-button"
               >
                 Submit
-                <i className="fa fa-angle-right" aria-hidden="true"></i>
               </Link>
             )}
           </div>
