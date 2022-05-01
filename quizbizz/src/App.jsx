@@ -8,6 +8,7 @@ import MockMan from "mockman-js";
 import QuizInstruction from "./pages/quizinstruction/QuizInstruction";
 import RequiredAuth from "./components/require-auth/RequiredAuth";
 import QuizQuestion from "./pages/quizquestion/QuizQuestion";
+import QuizAnswers from "./pages/quizanswers/QuizAnswers";
 
 function App() {
   return (
@@ -30,6 +31,14 @@ function App() {
           element={
             <RequiredAuth>
               <QuizQuestion />
+            </RequiredAuth>
+          }
+        ></Route>
+        <Route
+          path="/quizanswers"
+          element={
+            <RequiredAuth>
+              <QuizAnswers />
             </RequiredAuth>
           }
         ></Route>

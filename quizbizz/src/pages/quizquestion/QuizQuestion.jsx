@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   Navbar,
   Sidebar,
@@ -157,14 +158,14 @@ const QuizQuestion = () => {
                 Next Question
               </button>
             ) : (
-              <button
-                onClick={handleNextButtonClick}
+              <Link
+                to="/quizanswers"
                 className="button button-primary quiz-button next-button"
                 aria-label="next-button"
               >
                 Submit
                 <i className="fa fa-angle-right" aria-hidden="true"></i>
-              </button>
+              </Link>
             )}
           </div>
           {/* <!--  ******************************** Quiz Button Container End ********************************  --> */}
