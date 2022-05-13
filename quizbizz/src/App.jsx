@@ -15,7 +15,14 @@ function App() {
     <div className="App">
       <Toasts />
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route
+          path="/"
+          element={
+            <RequiredAuth>
+              <Homepage />
+            </RequiredAuth>
+          }
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route

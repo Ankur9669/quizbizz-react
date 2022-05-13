@@ -1,6 +1,13 @@
 import React, { useEffect } from "react";
 import "./quizanswers.css";
-import { Navbar, Sidebar, QuizQuestionAnswer, useQuiz, Link } from "./index";
+import {
+  Navbar,
+  Sidebar,
+  QuizQuestionAnswer,
+  useQuiz,
+  Link,
+  useDocumentTitle,
+} from "./index";
 
 const QuizAnswers = () => {
   const { quiz, answersSelected } = useQuiz();
@@ -9,6 +16,7 @@ const QuizAnswers = () => {
   let totalCorrectAnswers = 0;
 
   useEffect(() => {
+    useDocumentTitle("QuizBizz-Answer");
     window.scrollTo(0, 0);
   }, []);
 

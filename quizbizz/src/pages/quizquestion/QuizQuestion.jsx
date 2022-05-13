@@ -8,6 +8,7 @@ import {
   useToast,
   AiOutlineLeft,
   AiOutlineRight,
+  useDocumentTitle,
 } from "./index";
 import "./quizquestion.css";
 
@@ -24,6 +25,7 @@ const QuizQuestion = () => {
   const options = question?.options;
 
   useEffect(() => {
+    useDocumentTitle("QuizBizz-Question");
     window.scrollTo(0, 0);
   }, []);
 
