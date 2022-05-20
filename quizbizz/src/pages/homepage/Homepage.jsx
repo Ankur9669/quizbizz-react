@@ -1,10 +1,11 @@
-import React from "react";
-import Navbar from "../../components/navbar/Navbar";
-import Sidebar from "../../components/sidebar/Sidebar";
-import HeroSection from "./heroSection/HeroSection";
+import React, { useEffect } from "react";
+import { Navbar, Sidebar, HeroSection, useDocumentTitle } from "./index";
 import "./homepage.css";
 
 const Homepage = () => {
+  useEffect(() => {
+    useDocumentTitle("QuizBizz-Home");
+  }, []);
   return (
     <div>
       <Navbar />

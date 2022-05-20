@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CssImage from "../../assets/images/css.png";
 import "./quizinstruction.css";
-import { Sidebar, Navbar, fetchApi, useToast } from "./index";
+import { Sidebar, Navbar, fetchApi, useToast, useDocumentTitle } from "./index";
 import { useQuiz } from "../../context/quiz-context";
 import { useParams, Link } from "react-router-dom";
 
@@ -19,6 +19,7 @@ const QuizInstruction = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    useDocumentTitle("QuizBizz-Instructions");
     fetchQuiz();
   }, []);
 

@@ -4,6 +4,7 @@ import { useQuiz } from "../../context/quiz-context";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "../../context/toast-context";
 import { AiOutlineLeft, AiOutlineRight } from "../../assets/icons/icons";
+import { useDocumentTitle } from "../../util/change-document-title";
 
 export {
   Navbar,
@@ -13,4 +14,5 @@ export {
   useToast,
   AiOutlineLeft,
   AiOutlineRight,
+  useDocumentTitle,
 };
